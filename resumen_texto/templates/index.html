@@ -1,0 +1,43 @@
+{% extends "layout/base.html" %}
+
+{% load static %}
+
+{% block 'content' %}
+
+<!-- Inicio bloque entrada de texto -->
+<div id="wrapper">
+    <form id="paper" method="POST" action="{% url 'procesar_texto' %}">
+        {% csrf_token %}
+        <div id="margin_search">Texto Original</div>
+        <textarea placeholder="Ingresa tu texto..." id="text" name="text" rows="4"  oninput="contarCaracteres('wordCount', 'text')">{{ request.POST.text }}</textarea>
+        <div class="num-palabras">
+            <div id="wordCount">Número de caracteres: 0</div>
+        </div>
+        <div id="button-container">
+            <input id="button_resumir" type="submit" value="Resumir">
+            <button id="button-delete" onclick="borrarTexto()">Borrar Todo</button>
+        </div>
+    </form>
+    
+</div>
+
+<!-- Fin bloque entrada de texto -->
+<!-- Inicio bloque resumen de texto -->
+<div id="wrapper">
+    <form id="paper2" method="GET" action="">
+        <div id="margin_resume">Texto resumido</div>
+        <textarea placeholder="Aqui aparecerá tu texto resumido" id="text2" name="text2" rows="4">{{resumen|join:' ' }}</textarea> 
+        <div id="button-container">
+            <button type="button" id="button-copy" onclick="copiarTexto()">Copiar</button>
+        </div> 
+    </form>
+</div>
+
+
+<!-- Fin bloque resumen de texto -->
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+<script src="{% static "script.js" %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock 'scripts' %}

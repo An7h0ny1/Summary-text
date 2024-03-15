@@ -1,0 +1,244 @@
+* {
+    outline: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: Courier, monospace;
+}
+
+body {
+    background: #333 url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;
+}
+
+/*Inicio Bloque de entrada de texto */
+#paper, #paper2{
+    color: #FFF;
+    font-size: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+#margin_search, #margin_resume {
+    margin-top: 60px;
+    margin-left: 12px;
+    margin-bottom: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#text, #text2{
+    width: 100%;
+    overflow: hidden;
+    background-color: #FFF;
+    color: #222;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    resize: none;
+    line-height: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 45px;
+    padding-bottom: 34px;
+    background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+    background-repeat: repeat-y, repeat;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 2px 14px #000;
+    box-shadow: 0px 2px 14px #000;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    word-wrap: break-word;
+    height: 160px;
+}
+
+#title {
+    background-color: transparent;
+    border-bottom: 3px solid #FFF;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Courier, monospace;
+    height: 28px;
+    font-weight: bold;
+    width: 220px;
+}
+
+#button_resumir {
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF;
+    text-shadow: 0px 2px 0px #000000;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border-top: 1px solid #FFF;
+    -webkit-box-shadow: 0px 2px 14px #000;
+    box-shadow: 0px 2px 14px #000;
+    background-color: #62add6;
+    background-image: url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+    background-repeat: repeat-x;
+    position: absolute;
+}
+
+#button-copy {
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFF;
+    text-shadow: 0px 2px 0px #000000;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border-top: 1px solid #FFF;
+    -webkit-box-shadow: 0px 2px 14px #000;
+    box-shadow: 0px 2px 14px #000;
+    background-color: #62add6;
+    background-image: url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+    background-repeat: repeat-x;
+    position: absolute;
+}
+
+#button-container {
+    position: relative;
+}
+
+#button_resumir:active, #button-delete:active, #button-copy:active {
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#button_resumir:focus, #button-delete:focus, #button-copy:active {
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#button-delete {
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0px 2px 0px #ab2929;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border-top: 1px solid #FFF;
+    -webkit-box-shadow: 0px 2px 14px #e12828;
+    box-shadow: 0px 2px 14px #d51f1f;
+    background-color: #d53e3e;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 100px;
+    left: 0;
+
+
+}
+
+#wrapper{
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 0;
+    margin-left: 4%;
+}
+
+/* Muestra la información adicional cuando se pasa el mouse sobre el ícono */
+#margin:hover {
+    display: block;
+}
+
+.num-palabras {
+    position: absolute;
+    bottom: 33px;
+    right: -150px;
+    color: #000;
+}
+
+
+.num-palabras_resumen {
+    position: absolute;
+    bottom: 33px;
+    right: -150px;
+    color: #000;
+}
+
+/*Fin Bloque de entrada de texto */
+
+/*------------------------------------------------------------------------------------*/
+
+/*Inicio Bloque resumen de texto */
+
+.limit {
+    position: absolute;
+    right: -154px;
+    top: 70px;
+    color: #fff;
+    margin: 10px;
+
+}
+
+@media (max-width: 1669px) {
+
+    /* Estilo para pantallas más pequeñas (ajustar según sea necesario) */
+    #wrapper {
+        width: 50%;
+        margin-top: 40px;
+    }
+    #button-delete{
+        position: absolute;
+        left: 0;
+    }
+
+}
+
+@media (max-width: 839px) {
+
+    /* Estilo para pantallas más pequeñas (ajustar según sea necesario) */
+    .limit{
+        position: initial;
+    }
+
+}
+
+@media (max-width: 442px) {
+
+    /* Estilo para pantallas más pequeñas (ajustar según sea necesario) */
+    #button-delete{
+        
+        position: absolute;
+        right: 0;
+        bottom: -126px;
+        padding: 10px;
+    }
+    #margin{
+        margin-top: 112px;
+    }
+
+}
+
+
+/*Fin Bloque resumen de texto */
