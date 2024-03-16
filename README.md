@@ -11,7 +11,7 @@ Clona este repositorio en tu máquina local:
 > git clone https://github.com/An7h0ny1/Summary-text.git
 
 ## Configuración
-Antes de ejecutar la aplicación, que generes una nueva SECRET_KEY utilizando el comando de <i> startproject </i>
+Antes de ejecutar la aplicación, debes generes una nueva SECRET_KEY utilizando el comando de <i> startproject </i>
 
 ### settings.py
 > SECRET_KEY = 'TuNuevaSecretKeyAquí'
